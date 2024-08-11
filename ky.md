@@ -18,7 +18,7 @@ I have a confession to make though. Even long after fetch was introduced, I stil
 
 Now, it's important to note that the problem was not with axios itself. The problem was that axios was built on top of `XMLHttpRequest`, at least, when running in the browser. I was working on a chrome extension, and I found out that service workers in Manifest version 3 extensions don't have support for `XMLHttpRequest`. I had to switch to fetch, and I was not happy about it. I mean, I love fetch, but I was so used to axios that I didn't want to switch.
 
-The switch was primarily hard because not only did axios make working with `XMLHttpRequest` easier, but it also had a lot of features that I didn't even know I needed. Really, I was spoiled by axios. From customizable instances to interceptors, axios was a great library. Switching to fetch meant that I wasn't going lose all of these features.
+The switch was primarily hard because not only did axios make working with `XMLHttpRequest` easier, but it also had a lot of features that I didn't even know I needed. Really, I was spoiled by axios. From customizable instances to interceptors, axios was a great library. Switching to fetch meant that I was going lose all of these features.
 
 Naturally, I had 2 options. I could either write my own wrapper around fetch or find a library that did what I needed. I chose the latter, and that's how I found ky. To some extent, you could say `ky` is to fetch what axios is to `XMLHttpRequest`.
 
